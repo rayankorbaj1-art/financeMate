@@ -1,0 +1,162 @@
+[
+  {
+    "id": "txn-001",
+    "date": "2026-10-01",
+    "description": "October salary",
+    "category": "Salary",
+    "type": "income",
+    "amount": 520000
+  },
+  {
+    "id": "txn-002",
+    "date": "2026-10-02",
+    "description": "October rent",
+    "category": "Housing",
+    "type": "expense",
+    "amount": 180000
+  },
+  {
+    "id": "txn-003",
+    "date": "2026-10-04",
+    "description": "Weekly groceries",
+    "category": "Groceries",
+    "type": "expense",
+    "amount": 16250
+  },
+  {
+    "id": "txn-004",
+    "date": "2026-10-06",
+    "description": "Monthly bus pass",
+    "category": "Transport",
+    "type": "expense",
+    "amount": 9800
+  },
+  {
+    "id": "txn-005",
+    "date": "2026-10-09",
+    "description": "Freelance design work",
+    "category": "Freelance",
+    "type": "income",
+    "amount": 45000
+  },
+  {
+    "id": "txn-006",
+    "date": "2026-10-12",
+    "description": "Electricity and heating",
+    "category": "Utilities",
+    "type": "expense",
+    "amount": 12400
+  },
+  {
+    "id": "txn-007",
+    "date": "2026-10-15",
+    "description": "Market groceries",
+    "category": "Groceries",
+    "type": "expense",
+    "amount": 22100
+  },
+  {
+    "id": "txn-008",
+    "date": "2026-10-18",
+    "description": "Dinner with friends",
+    "category": "Dining",
+    "type": "expense",
+    "amount": 7200
+  },
+  {
+    "id": "txn-009",
+    "date": "2026-10-22",
+    "description": "Pharmacy prescription",
+    "category": "Healthcare",
+    "type": "expense",
+    "amount": 5600
+  },
+  {
+    "id": "txn-010",
+    "date": "2026-10-27",
+    "description": "Cinema tickets",
+    "category": "Entertainment",
+    "type": "expense",
+    "amount": 8900
+  },
+  {
+    "id": "txn-011",
+    "date": "2026-11-01",
+    "description": "November salary",
+    "category": "Salary",
+    "type": "income",
+    "amount": 520000
+  },
+  {
+    "id": "txn-012",
+    "date": "2026-11-02",
+    "description": "November rent",
+    "category": "Housing",
+    "type": "expense",
+    "amount": 180000
+  },
+  {
+    "id": "txn-013",
+    "date": "2026-11-03",
+    "description": "Weekly groceries",
+    "category": "Groceries",
+    "type": "expense",
+    "amount": 18750
+  },
+  {
+    "id": "txn-014",
+    "date": "2026-11-05",
+    "description": "Monthly bus pass",
+    "category": "Transport",
+    "type": "expense",
+    "amount": 9800
+  },
+  {
+    "id": "txn-015",
+    "date": "2026-11-08",
+    "description": "Electricity and heating",
+    "category": "Utilities",
+    "type": "expense",
+    "amount": 13900
+  },
+  {
+    "id": "txn-016",
+    "date": "2026-11-11",
+    "description": "Freelance logo project",
+    "category": "Freelance",
+    "type": "income",
+    "amount": 32000
+  },
+  {
+    "id": "txn-017",
+    "date": "2026-11-14",
+    "description": "Lunch downtown",
+    "category": "Dining",
+    "type": "expense",
+    "amount": 9400
+  },
+  {
+    "id": "txn-018",
+    "date": "2026-11-19",
+    "description": "Market groceries",
+    "category": "Groceries",
+    "type": "expense",
+    "amount": 20500
+  },
+  {
+    "id": "txn-019",
+    "date": "2026-11-23",
+    "description": "Streaming subscription",
+    "category": "Entertainment",
+    "type": "expense",
+    "amount": 6500
+  },
+  {
+    "id": "txn-020",
+    "date": "2026-11-28",
+    "description": "Over-the-counter medicine",
+    "category": "Healthcare",
+    "type": "expense",
+    "amount": 3400
+  }
+]
