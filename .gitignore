@@ -1,5 +1,11 @@
 node_modules/
 
+# Generated SQLite database and its sidecar files
+src/db/database.sqlite
+src/db/database.sqlite-journal
+src/db/database.sqlite-wal
+src/db/database.sqlite-shm
+
 *.db
 *.sqlite
 *.sqlite3
