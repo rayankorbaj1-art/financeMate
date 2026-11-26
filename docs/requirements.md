@@ -67,7 +67,7 @@ year-month/category/type totals and applies it to its new values.
 ### Search and filters
 
 F13. Search is a case-insensitive partial match against the description and
-category.
+category only.
 
 F14. The user can filter by year-month, category, and transaction type
 (`income` or `expense`).
@@ -84,7 +84,7 @@ keeps the entered search and filter values visible.
 ### Starter data and profiling
 
 F18. The project includes twenty fictional starter transactions across October
-and November, including both income and expenses.
+and November 2026, including both income and expenses.
 
 F19. Starter data is profiled before SQLite import. Profiling checks record
 count, year-month coverage, income and expense counts, category counts,
@@ -99,12 +99,13 @@ from being imported.
 D1. Every transaction has a unique, stable ID. IDs cannot be blank, duplicated,
 reused, or changed by editing.
 
-D2. Every transaction has a valid calendar date. Year and month are derived
-and compared together; October in one year must never be combined with
-October in another year.
+D2. Every transaction has a valid calendar date stored and displayed as
+`YYYY-MM-DD`. Year and month are derived and compared together; October in
+one year must never be combined with October in another year.
 
 D3. Descriptions and categories are required and must contain non-whitespace
-text. Input is trimmed before validation and storage.
+text. Input is trimmed before validation and storage. Categories accept
+trimmed, non-empty free text; there is no fixed category vocabulary.
 
 D4. The only allowed transaction types are `income` and `expense`.
 
@@ -112,7 +113,8 @@ D5. Amounts are positive whole numbers of ISK. Zero, negative, fractional,
 non-numeric, and other-currency amounts are invalid. Values are displayed as
 whole ISK amounts.
 
-D6. Transactions are stored persistently in SQLite. Transactions added,
+D6. Transactions are stored persistently in the SQLite database at
+`src/db/database.sqlite`, relative to the project root. Transactions added,
 edited, or deleted remain changed after the application is restarted.
 
 D7. Starter-data import is repeatable and must not create duplicate records
@@ -223,23 +225,20 @@ As a user, I want the tracker to work in common constrained situations.
 - **Fail:** A failure is silent, entered data is lost, or a core control cannot
   be reached or operated by keyboard.
 
-## Decisions that still need input
+## Resolved decisions
 
-These choices do not block the requirements, but should be confirmed before
-implementation:
+The following decisions are confirmed and apply consistently to the dashboard,
+transactions page, and data setup:
 
-1. **Starter-data year:** Should October and November use a named year, or
-   should the year be chosen when the starter data is created? Recommended:
-   choose one explicit year so tests can use exact year-month values.
-2. **Category vocabulary:** May users enter any non-empty category, or must
-   they choose from a fixed list? Recommended for the student-sized first
-   version: allow non-empty text and use the same text for grouping and
-   filtering.
-3. **Date format:** What date format should users see? Recommended: use one
-   consistent calendar date format and document it in the interface; date
-   comparisons must still use the full year-month.
-4. **Search fields:** The requirement currently searches description and
-   category only. Confirm whether type or date should also be searchable.
-5. **Repeated import policy:** The requirement currently skips existing IDs,
-   leaves them unchanged, and reports the count. Confirm whether existing
-   records should instead be updated.
+1. The twenty fictional starter transactions cover October and November 2026.
+2. Categories accept trimmed, non-empty free text; they are not restricted to
+   a predefined list.
+3. Dates are stored and displayed as `YYYY-MM-DD`. Month filtering compares
+   both the year and month.
+4. Search performs case-insensitive partial matching on descriptions and
+   categories only.
+5. Repeated starter-data imports skip existing IDs, preserve those records
+   unchanged, and report the skipped count. Starter data must pass profiling
+   before import.
+6. The SQLite database is located at `src/db/database.sqlite`, relative to
+   the project root.
